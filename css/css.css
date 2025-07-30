@@ -1,0 +1,463 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Pretendard-Regular";
+  letter-spacing: -0.4px;
+  line-height: 150%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.allWrap {
+  width: 1920px;
+  background: #F7F7FB;
+  position: relative;
+}
+
+.header {
+  height: 80px;
+  margin: 0 48px 0 48px;
+  display: flex;
+  align-items: center;
+}
+
+.header .menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header .menu li {
+  /* background:red; */
+  font-size: 16px;
+}
+
+.header .menu .logo {
+  margin-right: 174px;
+}
+
+.header .menu .menu1 {
+  margin-right: 19px;
+}
+
+.header .menu .menu1:nth-of-type(2) {
+  font-weight: 600;
+}
+
+.header .menu .menu2 {
+  padding: 10px 20px;
+}
+
+.header .menu li:nth-of-type(7) {
+  margin-right: 12;
+  margin-left: auto;
+}
+
+.header .menu li:nth-of-type(8) {
+  background-color: #006ACC;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.topBanner {
+  margin-top: 70px;
+  position: relative;
+}
+
+.topBanner p {
+  text-align: center;
+}
+
+.topBanner ul:nth-of-type(1) {
+  width: 202px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 10px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.topBanner ul:nth-of-type(1) li {
+  width: 96px;
+  padding: 10px 20px;
+}
+
+.topBanner p:first-child {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.topBanner p:nth-child(2) {
+  font-size: 16px;
+  font-weight: 500;
+  color: #767676;
+}
+
+.topBanner ul:nth-of-type(1) li:first-child {
+  border: 1px solid #e5e5ec;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.topBanner ul:nth-of-type(1) li:last-child {
+  border-radius: 8px;
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.topBanner input {
+  width: 540px;
+  margin: 0 auto;
+  display: block;
+  height: 60px;
+  padding-left: 56px;
+  border-radius: 12px;
+  filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.06));
+  border: none;
+  margin-top: 48px;
+}
+
+.topBanner input::-moz-placeholder {
+  color: #767676;
+  font-size: 16px;
+}
+
+.topBanner input::placeholder {
+  color: #767676;
+  font-size: 16px;
+}
+
+.topBanner ul:nth-of-type(2) {
+  width: 1420px;
+  margin: 112px auto 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.topBanner ul:nth-of-type(2) li {
+  display: flex;
+  align-items: center;
+  width: 167px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.06));
+}
+
+.topBanner ul:nth-of-type(2) li img {
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.topGlass {
+  width: 1270px;
+  height: 245px;
+  left: 50%;
+  top: 0;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.topGlass li {
+  position: absolute;
+}
+
+.topGlass li:first-child {
+  transform: rotate(45deg);
+  left: 0;
+  top: 0;
+}
+
+.topGlass li:nth-child(2) {
+  right: 0;
+}
+
+.topGlass li:last-child {
+  right: 180px;
+  top: 70px;
+}
+
+.topVideo {
+  width: 1420px;
+  margin: 120px auto;
+  position: relative;
+  height: 550px;
+}
+
+.topVideo div {
+  position: absolute;
+}
+
+.topVideo iframe {
+  border-radius: 14px;
+  width: 1200px;
+  height: 550px;
+  display: block;
+}
+
+.topVideo1 {
+  left: 50%;
+  transform: translateX(-600px);
+  width: 1200px;
+  z-index: 1;
+}
+
+.topVideo2 {
+  width: 1200px;
+  height: 460px;
+  overflow: hidden;
+  top: 50%;
+  transform: translateY(-230px);
+}
+
+.topVideo3 {
+  width: 1200px;
+  right: 0;
+  height: 460px;
+  overflow: hidden;
+  top: 50%;
+  transform: translateY(-230px);
+}
+
+.back-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+
+.content1, .content2 {
+  width: 1420px;
+  margin: 0 auto;
+}
+
+.content1 {
+  margin-bottom: 120px;
+}
+
+.mainTitle {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.subTitle {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.subTitle p {
+  color: #767676;
+}
+
+.subTitle a {
+  padding: 10px 20px;
+  display: block;
+  border: 1px solid #e5e5ec;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-left: auto;
+  font-weight: 600;
+}
+
+.content1 .content, .content2 .content {
+  width: 100%;
+}
+
+.content1 .content ul, .content2 .content ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.content2 .content ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.content1 .content ul li {
+  padding: 40px 32px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  flex: 1 1 calc(33.3% - 32px);
+  filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.06));
+}
+
+.content .contentTitle p:first-child {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.content .contentTitle p:nth-child(2) {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 54px;
+}
+
+.content .contentTitle p:nth-child(3) {
+  color: #767676;
+  font-size: 15px;
+  margin-bottom: 54px;
+}
+
+.content .contentBottom {
+  display: flex;
+  position: relative;
+}
+
+.content .contentBottom a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url("/img/stroke.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: auto;
+}
+
+.content .contentBottom img:nth-child(2) {
+  z-index: 1;
+  margin-left: auto;
+}
+
+.content .contentBottom img:last-child {
+  z-index: 2;
+  position: absolute;
+  right: -5px;
+  top: 15px;
+  opacity: 0.4;
+  filter: blur(20px);
+}
+
+.content2 .content ul li {
+  flex: 1 1 calc(33.3% - 32px);
+  filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.06));
+}
+
+.content2 li {
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 24px;
+}
+
+.content2 img {
+  width: 646px;
+  height: 355px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 30%;
+     object-position: 50% 30%;
+  border-radius: 16px;
+  margin-bottom: 38px;
+}
+
+.content2 li div {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.content2 li div p:first-child, .content2 li div p:nth-child(2) {
+  width: 78px;
+  padding: 6px 6px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.content2 li div p:first-child {
+  background: rgba(17, 17, 17, 0.1);
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+.content2 li div p:nth-child(2) {
+  border: 1px solid #e5e5ec;
+}
+
+.content2 li div p:last-child {
+  margin: auto 0 0 auto;
+}
+ 
+/* scss 공부해본 흔적
+// variables.scss, mixins.scss 파일 있다는 가정 하에
+// variables 파일에는 '$font-color:#ffffff' 가 쓰여있다는 가정
+// mixin 파일에는 아래 구문이 작성 되어 있다고 가정 하고
+// @mixin set($c:center, $radius:8px){
+//  width: 78px;
+//  padding: 6px 6px;
+//  text-align: $c;
+//  border-radius: $radius;
+//  font-size: 14px;
+//  font-weight: 500;  
+//  }
+
+
+@use 'variables';
+@use 'mixins';
+
+.content2{
+  li{
+    div{
+      display:flex;
+      margin-bottom:24px;
+
+      p:first-child{
+        @include mixins.set;
+        background: rgba(17, 17, 17, 0.1);
+        color:variables.$font-color;
+        margin-right:8px;
+      }
+      p:nth-child(2){
+        border:1px solid #e5e5ec;
+        @include mixins.set;
+      }
+      p:last-child{
+        margin: auto 0 0 auto;
+      }
+    }
+  }
+}
+  */
+
+.content2 p:nth-child(3) {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.content2 p:nth-child(4) {
+  font-weight: 500;
+  color: #767676;
+  margin-bottom: 48px;
+}
+
+.content2 li a:last-child {
+  width: 100%;
+  background: #F7F7FB;
+  display: block;
+  text-align: center;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+}/*# sourceMappingURL=css.css.map */

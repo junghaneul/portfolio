@@ -1,0 +1,8 @@
+@use '../abstracts/variables';
+
+// layout/_allwrap.scss
+.allWrap {
+  width: 1920px;
+  background: variables.$bg-light-gray;
+  position: relative;
+}

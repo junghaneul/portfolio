@@ -1,0 +1,50 @@
+@use 'variables';
+
+@mixin flex-center-align {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-justify-center-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-base($bg: transparent, $color: inherit, $border: none, $padding: 10px 20px) {
+  padding: $padding;
+  background-color: $bg;
+  color: $color;
+  border: $border;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@mixin card-shadow {
+  filter: variables.$drop-shadow-light;
+}
+
+@mixin subtitle1{
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@mixin subtitle2{
+  font-weight: 500;
+  color: variables.$text-light-gray;
+}
+
+@mixin whiteButtons{
+  display: block;
+  border: 1px solid variables.$border-light-gray;
+  background-color: variables.$white-color;
+  border-radius: 8px;
+  font-weight: 600;
+}
+@mixin two-cardArray{
+  flex: 1 1 calc(33.3% - 32px);
+  @include card-shadow;
+  border-radius: 16px;
+  background: variables.$white-color;
+  padding: 24px;
+}

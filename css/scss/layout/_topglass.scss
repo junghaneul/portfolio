@@ -1,0 +1,29 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+// layout/_topglass.scss
+.topGlass {
+  width: 1270px;
+  height: 245px;
+  left: 50%;
+  top: 0;
+  position: absolute;
+  transform: translateX(-50%);
+
+  li {
+    position: absolute;
+
+    &:first-child {
+      transform: rotate(45deg);
+      left: 0;
+      top: 0;
+    }
+    &:nth-child(2) {
+      right: 0;
+    }
+    &:last-child {
+      right: 180px;
+      top: 70px;
+    }
+  }
+}

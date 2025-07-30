@@ -1,0 +1,96 @@
+/* 컨테이너 및 ul 스타일은 그대로 유지 */
+*{
+    box-sizing:border-box;
+}
+.content5 {
+    width: 1420px;
+    margin: 0 auto;
+}
+.content {
+    margin-left: auto;
+    /* width가 비어있습니다. 의도된 것이 아니라면 추가해주세요. */
+}
+.content ul {
+    display: block;
+}
+
+.content ul li {
+    position: relative;
+    flex: 1 1 calc(33.3% - 32px);
+    border-radius: 16px;
+    background: #ffffff;
+    margin: 0 0 32px auto;
+    width: 940px;
+    padding: 32px; /* li의 초기 패딩 */
+    filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.06));
+    overflow: hidden; /* **필수!** 넘치는 내용을 숨김 */
+
+    /* --- !!! 중요: li 자체의 애니메이션 관련 초기 스타일 (닫혀있는 상태) 수정 !!! --- */
+    /* p가 슬쩍 보이는 문제 해결을 위해 max-height 값을 정확히 조정해야 합니다. */
+    /* 이 값을 개발자 도구로 질문 p만 보이도록 미세조정하세요. (예: 108px, 90px 등) */
+    max-height: 108px; /* <--- 이 값을 직접 조정하여 질문 p만 정확히 보이도록 합니다. */
+
+    /* opacity와 visibility는 li 자체에 주지 않습니다! */
+    
+    /* 트랜지션 지속 시간은 0.7s로 설정 (JavaScript와 일치) */
+    transition: max-height 0.7s ease-out, /* height 대신 max-height 트랜지션 */
+                margin 0.7s ease-out,
+                padding 0.7s ease-out;
+    display: block; /* li 자체는 항상 display: block 상태로 유지 */
+}
+
+/* .content ul li.display-block 클래스가 li에 추가되었을 때 (열린 상태) */
+.content ul li.display-block {
+    max-height: 500px !important; /* 충분히 큰 값으로 설정하여 콘텐츠가 모두 보이도록 함 */
+    /* opacity와 visibility는 li 자체에 주지 않습니다! */
+    padding: 32px !important; /* 열렸을 때 패딩 */
+    margin: 0 0 32px auto !important; /* 열렸을 때 마진 */
+}
+
+/* --- p 태그와 a 태그의 고유 스타일 (변경 없음) --- */
+.content ul li p:first-child {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 12px 0;
+}
+.content ul li p:nth-child(2) {
+    color: #767676;
+    font-size: 18px;
+    margin: 40px 0 32px; /* 이전처럼 12px로 유지. */
+    /* display: none; 제거 유지 */
+}
+.content ul li a {
+    background-color: #F7F7FB;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 18px;
+    /* display: none; 제거 유지 */
+}
+
+/* 버튼 스타일은 그대로 유지 */
+.content ul li button.button-close {
+    position: absolute;
+    font-size: 20px;
+    top: 32px;
+    right: 32px;
+    width: 52px;
+    height: 52px;
+    background: #E7F0FF;
+    border-radius: 8px;
+    color: #005EFF;
+    border: none;
+}
+.content ul li button.button-open {
+    position: absolute;
+    font-size: 28px;
+    top: 32px;
+    right: 32px;
+    width: 52px;
+    height: 52px;
+    background: #f7f7fb;
+    border-radius: 8px;
+    color: #111111;
+    border: none;
+}

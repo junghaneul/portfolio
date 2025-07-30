@@ -1,0 +1,424 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+// pages/_content.scss
+.content1, .content2, .content3, .content4 ,.content5{
+  width: 1420px;
+  margin: 0 auto;
+
+  .content { // .content1 .content, .content2 .content
+    width: 100%;
+
+    ul { // .content1 .content ul, .content2 .content ul
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+  }
+}
+
+.content1, .content3{
+    margin-bottom: 120px;
+  .content {
+    ul {
+      li {
+        padding: 40px 32px;
+        border-radius: 16px;
+        background-color: variables.$white-color;
+        flex: 1 1 calc(33.3% - 32px);
+        @include mixins.card-shadow;
+      }
+    }
+  }
+}
+.content2, .content4{
+  margin-bottom:120px;
+}
+
+.mainTitle {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.subTitle {
+  display: flex;
+  margin-bottom: 40px;
+
+  p {
+    color: variables.$text-light-gray;
+    span{
+      color:#111111;
+    }
+  }
+
+  a {
+    padding: 10px 20px;
+    margin-left:auto;
+    @include mixins.whiteButtons;
+  }
+}
+
+.content { // 공통 .content 하위 요소
+  .contentTitle {
+    p {
+      &:first-child {
+        font-weight: 600;
+        font-size: 32px;
+        margin-bottom: 32px;
+      }
+      &:nth-child(2) {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+      &:nth-child(3) {
+        color: variables.$text-light-gray;
+        font-size: 15px;
+        margin-bottom: 54px;
+      }
+    }
+  }
+
+  .contentBottom {
+    display: flex;
+    position: relative;
+
+    a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-image: url('/img/stroke.png');
+      background-size: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-top: auto;
+    }
+
+    img {
+      &:nth-child(2) {
+        z-index: 1;
+        margin-left: auto;
+      }
+      &:last-child {
+        z-index: 2;
+        position: absolute;
+        right: -5px;
+        top: 15px;
+        opacity: 0.4;
+        filter: blur(20px);
+      }
+    }
+  }
+}
+
+.content2{
+  .content {
+    >ul>li{
+      @include mixins.two-cardArray;
+    }
+  }
+  
+  img{
+    width: 646px;
+    height: 355px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 16px;
+    margin-bottom: 38px;
+  }
+
+  li{
+    div {
+      display: flex;
+      margin-bottom: 24px;
+
+      p {
+        &:first-child, &:nth-child(2) {
+          width: 78px;
+          padding: 6px 6px;
+          text-align: center;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        &:first-child {
+          background: rgba(17, 17, 17, 0.1);
+          color: variables.$white-color;
+          margin-right: 8px;
+        }
+
+        &:nth-child(2) {
+          border: 1px solid variables.$border-light-gray;
+        }
+
+        &:last-child {
+          margin: auto 0 0 auto;
+        }
+      }
+    }
+
+    p { // .content2 li p
+      &:nth-child(3) { // 3번째 p 태그 (div 다음)
+        @include mixins.subtitle1;
+        margin-bottom: 12px;
+      }
+      &:nth-child(4) { // 4번째 p 태그
+        @include mixins.subtitle2;
+        margin-bottom: 48px;
+      }
+    }
+    
+    a.clickButton {
+      width: 100%;
+      background: variables.$bg-light-gray;
+      display: block;
+      text-align: center;
+      padding: 16px 24px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}
+.content3{
+  .content{
+    ul{
+      li{
+        width: 100%;
+        height: 288px;
+        padding: 0 24px 0 24px;
+        box-sizing: border-box;
+        background-image: linear-gradient(to bottom, white 62.5%, #f8f8fb 62.5%);
+        background-repeat: no-repeat;
+        div:first-child{
+          height:180px;
+          padding-top:32px;
+          p:first-child{
+            @include mixins.subtitle1;
+            margin-bottom:12px;
+          }
+          p:last-child{
+            @include mixins.subtitle2;
+            margin-bottom:48px;
+          }
+        }
+        div:last-child{
+          width:100%;
+          margin-top:24px;
+          display: flex;
+          align-items: center;
+          img{
+            @include mixins.flex-center-align;
+            width:60px;
+            height:60px;
+            display:block;
+            margin-right:16px;
+          }
+          p{
+            @include mixins.flex-center-align;
+          }
+          a{
+            @include mixins.flex-center-align;
+            @include mixins.whiteButtons;
+            padding:12px 24px;
+            margin-left:auto;
+            height:46px;
+          }
+        }
+      }
+    }
+  }
+}
+.content4{
+  .subTitle{
+    align-items: end;
+    div{
+      background:#E7F0FF;
+      border-radius: 12px;
+      padding:6px;
+      display: flex;
+      margin-left:auto;
+      a:first-child{
+        background:#005EFF;
+        color:white;
+        font-weight: 700;
+      }
+      a:last-child{
+        border:none;
+        background:none;
+        font-weight:700;
+        color:#767676;
+      }
+    }
+  }
+  .content{
+    ul{
+      li.plan-content, 
+      li.plan-content2{
+        @include mixins.two-cardArray;
+        padding:0 !important;
+        height:100%;
+        div{
+          border-radius:16px 16px 0 0;
+          padding:24px;
+          p:first-child{
+            padding:12px 20px;
+            background:#f7f7fb;
+            border-radius: 12px;
+            text-align:center;
+            font-size:22px;
+            font-weight:500;
+            margin-bottom:60px;
+          }
+          p:nth-child(2){
+            font-size:64px;
+            color:#111111;
+            font-weight:800;
+            text-align:center;
+            height: 130px;
+            margin-bottom:48px;
+            span{
+              vertical-align: middle;
+              font-weight:500;
+              font-size:32px;
+              color:#767676;
+            }
+          }
+          p:nth-child(3){
+            font-size:20px;
+            margin-bottom:20px;
+            font-weight:500;
+          }
+          ul:nth-child(4){
+            display:block;
+            li{
+              display:block;
+              border:1px solid #E5E5EC;
+              padding:16px 20px;
+              border-radius: 8px;
+              margin-bottom:16px;
+              img{
+                margin-right:15px;
+              }
+            }
+          }
+        }
+        a{
+          display: block;
+          width:100%;
+          padding:20px;
+          text-align: center;
+          border-radius:0 0 14px 14px;
+          background-color: #E7F0FF;
+          color:#005EFF;
+          font-weight:700;
+          margin-top:4px;
+        }
+      }
+    }
+  }
+}
+
+li.plan-content2{
+  filter: drop-shadow(0px 00px 15px rgba(25, 76, 178, 0.25)) !important;
+  border:2px solid #005EFF;
+  div{
+    p:first-child{
+      background:#E7F0FF !important;
+    }
+  }
+  a{
+    background:#005EFF !important;
+    color:white !important;
+    margin-top:4px;
+  }
+}
+
+.content5{
+  display: flex;
+  div:first-child{
+    div.subTitle{
+      display:block;
+      p:first-child{
+        margin-bottom:32px;
+      }
+      a{
+        display: inline-block;
+        width:auto;
+      }
+    }
+  }
+  div.content{
+    ul{
+      display: block;;
+      li{
+        position:relative;
+         @include mixins.two-cardArray;
+         display:block;
+         padding:32px;
+         width:940px;
+         margin:0 0 24px auto;
+        p:first-child{
+          font-weight:700;
+          font-size:20px;
+          margin:12px 0;
+        }
+        p:nth-child(2){
+          color:#767676;
+          font-size:18px;
+          margin:12px 0 32px;
+          max-height: 0;
+          overflow:hidden;
+          opacity:0;
+          transition: max-height 0.7s ease-out, opacity 0.7s ease-out;
+          display:none;
+        }
+        a{
+          background-color:#F7F7FB;
+          padding:20px;
+          display: block;
+          width:100%;
+          text-align: center;
+          border-radius:8px;
+          font-size:18px;
+          max-height: 0;
+          overflow:hidden;
+          opacity:0;
+          transition: max-height 0.7s ease-out, opacity 0.7s ease-out;
+          display: none;
+        }
+        button.button-close{
+          position:absolute;
+          font-size:20px;
+          top:32px;
+          right:32px;
+          width:52px;
+          height:52px;
+          background:#E7F0FF;
+          border-radius:8px;
+          color:#005EFF;
+          border:none;
+        }
+        button.button-open{
+          position:absolute;
+          font-size:28px;
+          top:32px;
+          right:32px;
+          width:52px;
+          height:52px;
+          background:#f7f7fb;
+          border-radius:8px;
+          color:#111111;
+          border:none;
+        }
+      }
+    }
+  }
+}
+.display-block{
+  max-height: 500px !important;
+  opacity: 1 !important;
+  display: block !important;
+}

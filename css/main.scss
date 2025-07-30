@@ -1,0 +1,17 @@
+@use 'scss/abstracts/variables' as var; // 'as var'는 선택사항. 나중에 사용할 때 var.$primary-color 처럼 사용 가능
+@use 'scss/abstracts/mixins' as mix;   // 'as mix'는 선택사항. 나중에 사용할 때 @include mix.flex-center-align 처럼 사용 가능
+
+@use 'scss/abstracts/variables';
+@use 'scss/abstracts/mixins';
+
+@use 'scss/base/base';
+
+@use 'scss/layout/allwrap';
+@use 'scss/layout/header';
+@use 'scss/layout/topbanner';
+@use 'scss/layout/topglass';
+@use 'scss/layout/topvideo';
+
+@use 'scss/components/back-card';
+
+@use 'scss/pages/content';
